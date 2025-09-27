@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(16, 115, 201);
+    min-height: 10vh;
+    width: 100%;
+    position: fixed;
+    z-index: 800;
+    
+    
+}
+
+.logo img{
+    width:30px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.navbar .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .nav-link li{
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link li a{
+    text-decoration: none;
+}
+
+.hero{
+    text-align: center;
+    padding-top: 50%;
+    background: url(./img/traing.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:30vh;
+}
