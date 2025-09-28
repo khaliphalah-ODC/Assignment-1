@@ -1,48 +1,324 @@
 *{
-    padding:0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-.header{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: rgb(16, 115, 201);
-    min-height: 10vh;
-    width: 100%;
-    position: fixed;
-    z-index: 800;
-    
-    
+    font-family: sans-serif;
 }
 
-.logo img{
-    width:30px;
-    margin-left: 20px;
-    padding-top: 10px;
+body{
+    background: linear-gradient(13deg, #0a2e36, #1a4d5c);
+    color: #fff;
+    line-height: 1.6;
+}
+
+.header{
+  background: rgba(0,0,0,0.9);
+  padding: 15px 30px;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 1000;
+  box-shadow: 0 0 0 10 rgba(0,0,0,0.6);
+}
+
+.header .logo img{
+    border-radius: 50%;
+    width: 30px;
 }
 
 .navbar .nav-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar .nav-link li{
     list-style: none;
-    font-size: 1.5rem;
+    display: flex;
+    gap:20px;
 }
-
 .navbar .nav-link li a{
     text-decoration: none;
+    color:#fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+
 }
 
+.navbar .nav-link li a:hover{
+    background: #00d9ff;
+    color:#0a2e36;
+}
 .hero{
-    text-align: center;
-    padding-top: 50%;
-    background: url(./img/traing.png);
+    background: url(./img/fc-fassel.jpeg);
+    min-height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height:30vh;
+     background-attachment: fixed; 
+     padding:20%;
+}
+
+.hero h1{
+    font-size: 2.6rem; 
+    color: #001f29;
+}
+    
+.glow h1{
+ animation: glow 2s infinite alternate;
+
+}
+
+
+@keyframes glow {
+  from {text-shadow: 0 0 10px #00d9ff;}
+  to {text-shadow: 0 0 20px #ffcc00;}
+}
+
+.center{
+    text-align: center;
+}
+.top{
+    text-align: center;
+}
+.fadeUp{
+    display: flex;
+    justify-content: center;
+    
+}
+.fadeUp img{
+    width: 40%;
+    flex-wrap: wrap;
+    
+}
+
+.fadeUp p{
+    padding-top: 80px;
+}
+
+.fadeUp {
+    width: 100%;
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+@keyframes fadeUp{
+     from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+section, .alt-videoUp{
+    position: relative;
+   margin: 40px auto;
+   padding: 20px;
+   max-width: 200%;
+   min-height: 100%;
+   background: rbga(255, 255, 255, 0.05); 
+   border-radius: 12px;
+   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.list{
+    text-align: center;
+    list-style: none;
+}
+
+iframe, video{
+    display: block;
+    margin: 20px auto;
+    border: 4px solid #00d9ff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    transition: transfrom 0.3s ease-in-out;
+    width: 50%;
+}
+iframe:hover, video:hover{
+    transform: scale(1.05);
+}
+
+.line::before{
+    content: "";
+    width: 10%;
+    top:10%;
+    left: 20%;
+    height: 7px;
+    background-color: #00d9ff;
+    position: absolute;
+}
+
+audio{
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    border: 2px solid #00d9ff;
+    border-radius: 20px;
+    padding: 5px;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    transition: all 0.3s ease;
+}
+
+audio:hover{
+    transform: scale(1.02);
+    border-color: #ffcc00;
+}
+
+.sidebar{
+    background: #12343b;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-left: 5px solid #00d9ff;
+    border-radius: 8px;
+    animation: bounce 2s infinite alternate;
+}
+
+.footer-section{
+    text-align: center;
+    padding: 15px;
+    background: #001f29;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+a[href="#"]{
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background: #00d9ff;
+    color:#0a2e36;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transfrom 0.3s ease-in-out;
+}
+a[href="#"]:hover{
+    transform: translateY(-5px);
+}
+
+
+
+/* ----Contact section ------*/
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    gap:2rem;
+}
+
+.contact-form{
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form label{
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact-form .btn{
+    background: #002244;
+    color:#fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+ .contact-form .btn:hover{
+    background: #ffcc00;
+    color:#002244
+ }
+.social{
+    flex:1;
+    min-width: 210px;
+    background:url(./img/traing.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5rem;
+    border-radius: 8px;
+    
+}
+
+.social h2{
+    color:#002244;
+    margin-bottom: 1rem;
+}
+.social ul{
+    list-style: none;
+}
+
+.social a{
+    text-decoration: none;
+    color:#002244;
+    font-weight: bold;
+}
+
+.social a:hover{
+    color:#ff6600
+}
+
+aside{
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 4px solid #002244;
+    border-radius: 8px;
+    margin: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+aside h3{
+    color:#002244;
+    margin-bottom: 0.5rem;
+}
+aside p{
+    color:#001f29;
+}
+
+/* ---------About section----------- */
+
+.main-con h1{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    animation: slideIn 1.5 ease-in-out
+
+}
+
+.section-content .content{
+    margin:20px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);  
+    animation: fadeUp 1.2s ease-in-out; 
+
+}
+
+.section-content img, .content img{
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    transition: transfrom 0.3s ease-in-out;
+}
+
+.section-content, img:hover .content:hover{
+    transform: scale(1.05);
+}
+.section-content, .content p{
+    width: 80%;
 }

@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
-            
+            <img src="./img/logo.jpg" alt="FC Fassel-.logo" width="400">
         </div>
-        <h1>Welcome to FC Fassel Official Website</h1>
-        <nav>
-            <ul>
+      
+        <nav class="navbar">
+            <ul class="nav-link">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./contact.html">Contact</a></li>
@@ -22,7 +23,7 @@
 
     <main>
         <section>
-            <form>
+            <form class="contact-form">
             <label for="name">name</label><br>
             <input type="text" placeholder="Enter your name"><br>
 
@@ -31,28 +32,32 @@
 
             <label for="message">Message</label><br>
             <textarea placeholder="Please give us feedback" name="message" rows="5"></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" class="btn">Send</button>
             </form>
         </section>
-        <article>
+        <article class="social">
             <h2>Follow us</h2>
             <ul>
                 <li><a href="">Facebook</a></li>
                 <li><a href="">Instagram</a></li>
                 <li><a href=""></a></li>
             </ul>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, veritatis! Perferendis minus dicta quaerat aperiam debitis. Autem neque minima tenetur dignissimos harum aliquid dolore error laudantium nostrum similique! Tenetur, accusantium?</p>
+            </div>
         </article>
     </main>
     <aside>
         <h3>Club Office</h3>
         <p>Broad Street, Monrovia, Liberia</p>
-        <p>Email: info@fcfassell.com</p>
+        <p><a href="mato">Email: info@fcfassell.com</a></p>
         <p>>Phone: +231 77 654 3210</p>
 
     </aside>
-    <footer>
+    <footer class="footer-section">
+        <a href="#">Top</a>
           <p>&copy; 2025 FC Fassell | All Rights Reserved</p>
     </footer>
-    <a href="#">Top</a>
+    
 </body>
 </html>
