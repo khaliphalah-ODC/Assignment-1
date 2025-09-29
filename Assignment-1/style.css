@@ -243,6 +243,12 @@ main{
     background: #ffcc00;
     color:#002244
  }
+ .hustle {
+    color: black;
+ }
+ .nav_bar {
+   text-align: center;
+ }
 .social{
     flex:1;
     min-width: 210px;
